@@ -23,6 +23,6 @@ public class Main {
 
         MortgageCalculator mc = new MortgageCalculator(principal, annualInterest, years);
 
-        System.out.println("Class mortgage: " + mc.getFormattedMortgage());
+        System.out.println(mc.toString());
     }
 }
