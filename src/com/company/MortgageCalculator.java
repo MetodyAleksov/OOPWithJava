@@ -46,6 +46,9 @@ public class MortgageCalculator {
     }
 
     private void setPrincipal(int principal) {
+        if(principal <= 0){
+            throw new IllegalArgumentException("Principal cannot be less than or equal to 0!");
+        }
         this.principal = principal;
     }
 
@@ -54,6 +57,9 @@ public class MortgageCalculator {
     }
 
     private void setAnnualInterest(float annualInterest) {
+        if(annualInterest <= 0){
+            throw new IllegalArgumentException("Annual interest cannot be less than or equal to 0!");
+        }
         this.annualInterest = annualInterest;
     }
 
@@ -70,6 +76,9 @@ public class MortgageCalculator {
     }
 
     private void setYears(byte years) {
+        if(years <= 0 || years > 100){
+            throw new IllegalArgumentException("Years must be between 1 and 100");
+        }
         this.years = years;
     }
 
