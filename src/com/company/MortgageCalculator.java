@@ -32,7 +32,10 @@ public class MortgageCalculator {
     public String toString(){
         StringBuilder sb = new StringBuilder();
 
-
+        sb.append("----------------");
+        sb.append("\nTotal Mortgage: " + getFormattedMortgage());
+        sb.append("\nNumber of payments: " + getNumberOfPayments());
+        sb.append("\n----------------");
 
         return sb.toString();
     }
